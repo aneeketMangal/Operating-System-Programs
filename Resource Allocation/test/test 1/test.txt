@@ -1,0 +1,2 @@
+gcc main.c -o main -pthread
+./main 6 2 4 6 46 35 54 39 44 76

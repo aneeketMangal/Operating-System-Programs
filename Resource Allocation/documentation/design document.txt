@@ -1,0 +1,22 @@
+CS203 Assignment 2 
+1. Overview:
+This project is a simulation of deadlock detection in an OS. Using this program
+we will simulate allocation of resources to various process and detecting
+deadlock. We will further terminate threads in deadlock using suitable 
+heuristics.
+
+2. Working:
+There are THREAD_COUNT POSIX threads representing threads/process in a OS system. 
+Each thread first decide random amount of resource instances for each resource type (also chosen randomly) it would require during the execution of the program.
+Then it would request random amount of resource instances of a random resource type from the system at random intervals 
+(1 seconds to 4 seconds) and if resources are available, it would be granted other wise the thread will do busy waiting. Once the threads complete execution (all the requests have been served), it would terminate and a new thread will be respawned after a duration of (0.7d to 1.5d).
+
+There is one thread to detect deadlock and if a deadlock is detected, 
+it would apply required heuristic and termiante (preempt) a deadlocked thread.
+Also there is one interrupt thread, that wait for user to interrupt the program. And once its interrupted, it shows the average time between detected deadlocks during the execution of the program.
+Terminated threads are respawned again after a duration of (0.7d to 1.5d).
+
+There are 3 types of heuristics for thread termination:
+    1. RANDOM: terminates a random thread
+    2. MINSUM: terminates thread with max resource allocation
+    3. MAXSUM: terminates thread with min resource allocation

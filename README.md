@@ -1,0 +1,1 @@
+This repository contains all operating system assignments for the course Operating Systems.

@@ -1,0 +1,6 @@
+#include "FIFO.c"
+#include "Random.c"
+#include "C-SCAN.c"
+#include "SCAN.c"
+#include "SSTF.c"
+#include "schedule.c"
